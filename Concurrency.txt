@@ -1,0 +1,29 @@
+🔖🔖ဒီနေ့ Concurrency အကြောင်းလေး ပြောရအောင် !!
+Concurrency အကြောင်း စပြောတော့မယ် ဆိုရင် အရင်ဆုံး Synchronous and Asynchronous အလုပ်လုပ်ပုံ အကြောင်း အရင်ဆုံး သိဖို့လိုပါတယ်။ 
++-+-+-+-+-+-+-+-+
+🔖Synchronous ?
+C Programming မှာဆိုရင် Main Function ကနေ Thread ဒါမှမဟုတ် Process တစ်ခုကို Function Call အနေနဲ့ လှမ်းခေါ်လိုက်တယ်ဆိုပါစို့။
+Function Call Process မပြီးမချင်း  Thread Function ပြီးဆုံးကြောင်း Reply မရမခြင်း  Main Function က စောင့်နေမှာ (Block State) ရောက်နေမှာဖြစ်တယ်။
+Synchronous ကို ဘယ်လိုအခြေအနေမှာ သုံးဖို့ သင့်တော်လည်း ဆိုတော့ Process Function တွေက Result ကို Main Function ဆက် Run ဖို့ အတွက် ချက်ချင်းလိုတဲ့ အခါမျိုး တွေမှာ သုံးသင့်တယ်။
+အရှင်းဆုံး ပြောရရင် Synchronous ဆိုတာ အလုပ် တစ်ခုပြီးမှ နောက်တစ်ခု လုပ်တာ တာလို့ ယူဆလို့ရပါတယ်။  ဒါပေမယ့် ဒီ အဓိပ္ပာယ် က Programming အတွက် ပြောတာပါ။ ကျန်တဲ့ Field တွေမှာ ဆိုရင် Synchronous Term ကို တစ်ချိန်တစ်ပြိုင်တည်း Parallel ဖြစ်တယ် ဆိုတဲ့ အသုံးမျိုး သုံးကြတာလည်း တွေ့ရပါတယ်။
++-+-+-+-+-+-+-+-+
+🔖Asynchronous ?
+Asynchronous ရဲ့ အလုပ်လုပ်ပုံ ကတော့ Main Function ဆက် run ဖို့အတွက် Process/Thread Function Call တွေ ပြီး တဲ့ အထိ စောင့်စရာမလိုပါဘူး။ 
+Process/Thread Function တွေ Run နေတဲ့ တစ်ပြိုင်နက်တည်းမှာဘဲ Main Function ကလည်း ဆက်ပြီး Run နေတယ်။ 
+Process Function တွေနဲ့ Main Function တွေဟာ တစ်ခုကို တစ်ခု မမှီခိုဘဲ သီးခြားစီ အပြိုင် Run နိုင်တယ်။ 
+Block State အခြေအနေ မရှိဘူး။ Tasks တွေ အများကြီးကို အပြိုင် Run လို့ရတယ်။ 
+CPU Resources ပေါ်မူတည်ပြီးတော့ Tasks တွေကို OS Scheduler က Time Slicing လုပ်ပြီးတော့ တစ်လှည့်စီ Run ပေးတာလည်း ဖြစ်ပါတယ်။ 
+Process Function တွေကနေရတဲ့ Result ကို Main Function မှာ  အသုံးပြုဖို့အတွက် ဆိုရင် Callbacks, Promise နဲ့ ကျန်တဲ့ Concurrency Mechanisms တွေကို အသုံးပြုလို့ရပါတယ်။
+သတိထားရမှာက Concurrency (အပြိုင်) အလုပ်လုပ်တာ နဲ့ Parallelism (တစ်ပြိုင်တည်း) မတူကြပါဘူး။ 
+Parallelism  ဆိုတာ Process/Tasks တွေကို တစ်ချိန်တည်း တစ်ပြိုင်တည်းမှာ Run တာ ဖြစ်ပြီးတော့ Concurrency ကတော့ Process/Tasks တွေကို CPU ပေါ်မှာ တစ်လှည့်စီ အလုပ်လုပ်တာ ဖြစ်ပါတယ်။ 
+ဉပမာ Tasks 6 ခုရှိတယ်။ CPU Core က 4 ခု ရှိတယ်ဆိုရင် Tasks 6 ခုလုံးစာ တစ်ချိန်တည်း Run ဖို့ CPU Core မလုံလောက်တဲ့ အတွက် 6 ခုလုံးကို Time Slicing လုပ်ပြီးတော့ Thread အစိတ်အပိုင်းတွေခွဲပြီး  တစ်လှည့်ချင်းအလုပ်လုပ်တာဖြစ်ပါတယ်။ 
+အလှည့်ကျ Run နေတာ ဖြစ်လို့  တစ်ချိန်တည်း တစ်ပြိုင်တည်း Run နေတာမျိုး မဟုတ်တဲ့အတွက် အလုပ်တွေ မြန်မြန် ပြီးသွားတယ်လို့ဆိုလိုတာ မဟုတ်ပါဘူး။  
+ဒီမှာ တစ်ခု အမှတ် မှားကြတာက Asynchronous သဘောတရား ဟာ Concurrency လိုမျိုးဘဲ အလုပ်လုပ်တယ် ဆိုပြီး အမှတ်မှားကြတာရှိပါတယ်။  
+ပုံမှန်အားဖြင့်တော့ Asynchronous ဟာ Concurrency လိုမျိုး အလုပ်လုပ်ပြီးတော့ တကယ်လို့ CPU Resources သာ Process/Tasks တွေကို တစ်ပြိုင်တည်း Run ဖို့ အလုံအလောက်ရှိမယ် System Architecture ကလည်း Support ပေးတယ်ဆိုရင် Parallelism တစ်ပြိုင်တည်းလည်း Run လို့ရပါတယ်။ 
+အထူးသဖြင့် Background မှာ အပြိုင် Run ဖို့လိုအပ်တဲ့ အခြေအနေမျိုးမှာ သုံးကြပါတယ်။ 
+OS တွေရဲ့ နောက်ကွယ်မှာ Run တဲ့ IO Operations တွေ၊ Network Operation, Communication  တွေမှာလည်း သုံးကြတယ်။ ပိုပြီး Efficient ဖြစ်တယ်လို့ပြောလို့ရတာပေါ့။ 
+ဉပမာ သီချင်းနားထောင်နေရင်း  နဲ့ Code ရေးနေတယ်ဆိုရင် ကျွန်‌တော်တို့ Computer ပေါ်မှာ Code လည်း ရေးလို့ရတယ်။ တစ်ချိန်တည်းမှာ ဘဲ သီးချင်းသံ ကို ကြားနေရတာ ဖြစ်ပါတယ်။ 
+အလုပ်နှစ်ခု ဟာ တစ်ပြိုင်းတည်း အလုပ်လုပ်နေတယ်လို့ ထင်စရာ ရှိပါတယ်။ 
+တကယ် က သူတို့အလုပ်နှစ်ခု ကို Millisecond အချိန်အပိုင်းအခြားစီလိုက် CPU ပေါ်မှာ တစ်လှည့်စီ အလုပ်လုပ်နေလို့ အခုလိုမျိုး Code ရေးရင်း နဲ့ သီးချင်းသံ ကြားနေရတာ ဖြစ်ပါတယ်။ 
+ဒီလောက်ဆိုရင် Concurrency ရဲ့ သဘော တရား အကြမ်းဖျင်းကို နားလည် သဘော ပေါက်လိမ့်မယ်လို့ ယူဆပါတယ်။
+#romdynamics #romrobotics  #deepblue_ai_lab #Concurrency #synchronous #asynchronous #multithreading
