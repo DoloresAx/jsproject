@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Page</title>
+  <link rel="stylesheet" href="bb.css">
+</head>
+<body>
+  <h1>Select Category</h1>
+
+  <!-- Changed from buttons to select -->
+  <select id="product-select" onchange="showImages(this.value)">
+    <option value="">Select Devices</option>
+    <option value="motor">Motor</option>
+    <option value="driver">Driver</option>
+  </select>
+
+  <div id="image-container"></div>
+
+  <table id="price-table">
+    <thead>
+      <tr>
+        <th>NO.</th>
+        <th>Description</th>
+        <th>Qty</th>
+        <th>Unit Price</th>
+        <th>Total Price</th>
+        
+      </tr>
+    </thead>
+    <tbody id="price-body">
+      <!-- JS will insert rows here -->
+    </tbody>
+                <tfoot>
+    <tr>
+        <td colspan="4" style="text-align: center;"><strong>Grand Total</strong></td>
+        <td id="grand-total">0</td>
+    </tr>
+</tfoot>
+  
+  </table>
+  <script src="cc.js"></script>
+</body>
+</html>

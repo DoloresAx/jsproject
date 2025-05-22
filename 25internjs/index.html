@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Project List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="indexx.js"></script>
+<body>
+   <table>
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>photos</th>
+                <th>Description</th>
+                <th>Qty</th>
+                <th>Unit Price</th>
+                <th>Total Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1.</td>
+                <td><select onchange="showImages(this)">
+          <option value="">Select</option>
+          <option value="A">Motors</option>
+          </select>
+                <div class="image-options" id="imagesA">
+          <label class="option-container">
+            <input type="radio" name="imgA" value="img1">
+            <img src="motor.jpg" alt="Option 1">
+          </label>
+          <label class="option-container">
+            <input type="radio" name="imgA" value="img2">
+            <img src="motor.jpg" alt="Option 2">
+          </label>
+          <label class="option-container">
+            <input type="radio" name="imgA" value="img3">
+            <img src="motor.jpg" alt="Option 3">
+          </label>
+        </div>
+                </td>
+                <td></td>
+                <td><input type="number" value="1"></td>
+                <td>10.00</td>
+                <td>0.00</td>
+            </tr>    
+            <tr>
+                <td>2.</td>
+                <td><select onchange="showImages(this)">
+          <option value="">Select</option>
+          <option value="B">Drivers</option>
+          </select>
+                <div class="image-options" id="imagesB">
+          <label class="option-container">
+            <input type="radio" name="imgB" value="img1">
+            <img src="driver.jpg" alt="Option 1">
+          </label>
+          <label class="option-container">
+            <input type="radio" name="imgB" value="img2">
+            <img src="driver.jpg" alt="Option 2">
+          </label>
+          <label class="option-container">
+            <input type="radio" name="imgB" value="img3">
+            <img src="driver.jpg" alt="Option 3">
+          </label>
+        </div>
+                </td>
+                <td></td>
+                <td><input type="number" value="1"></td>
+                <td>10.00</td>
+                <td>0.00</td>
+            </tr>  
+            <tfoot>
+    <tr>
+        <td colspan="5" style="text-align: center;"><strong>Grand Total</strong></td>
+        <td id="grandTotal">0.00</td>
+    </tr>
+</tfoot>
+   
+</table>
+</body>
+</html>
